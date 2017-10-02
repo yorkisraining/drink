@@ -44,11 +44,11 @@ function dao() {
 			// 	alert('d');
 			// }
 			if("vibrate" in navigator){
-				navigator.vibrate([1000, 1000, 1000, 1000, 1000]);
-				var r = confirm('shi fou quxiao');
-				if (r === true) {
-					navigator.vibrate(0);
-				}
+				navigator.vibrate(2000);
+// 				var r = confirm('shi fou quxiao');
+// 				if (r === true) {
+// 					navigator.vibrate(0);
+// 				}
 			} else {
 				alert('fail');
 			}
