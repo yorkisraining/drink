@@ -23,10 +23,16 @@ html, body {
 .set, .down {
 	position: absolute;
 	left: 50%;
-	width: 500px;
+	width: 100%;
 	transform: translate(-50%,-50%);
 	text-align: center;
 	margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+	.set, .down {
+		width: 300px;
+	}
 }
 
 .hidden {
