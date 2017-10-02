@@ -3,13 +3,14 @@ var set = document.getElementsByClassName('set')[0],
 	del = document.getElementsByClassName('del')[0],
 	hour = document.getElementsByClassName('hour')[0],
 	min = document.getElementsByClassName('minu')[0],
-	stime = document.getElementsByClassName('time')[0];
+	stime = document.getElementsByClassName('time')[0],
+	submit = document.getElementsByClassName('submit')[0];
 
 var sh, sm
 
 var timer;
 
-set.addEventListener('click', function() {
+submit.addEventListener('click', function() {
 	sh = hour.value;
 	sm = min.value;
 	set.className = 'set hidden';
