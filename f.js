@@ -26,6 +26,7 @@ del.addEventListener('click', function() {
 	set.className = 'set';
 	down.className = 'down hidden';
 	stime.innerHTML = '00:00:00';
+	navigator.vibrate(0);
 });
 
 function dao() {
@@ -34,13 +35,22 @@ function dao() {
 		if (num <= 0) {
 			clearInterval(timer);
 			num = 0;
-			if (window.webkitNotifications) {
-				if (window.webkitNotifications.checkPermission() === 0) {
-					var desktopTips = window.webkitNotifications.createNotification('', 'a', '该喝水了');
-					desktopTips.show();
+			// if (window.webkitNotifications) {
+			// 	if (window.webkitNotifications.checkPermission() === 0) {
+			// 		var desktopTips = window.webkitNotifications.createNotification('', 'a', '该喝水了');
+			// 		desktopTips.show();
+			// 	}
+			// } else {
+			// 	alert('d');
+			// }
+			if("vibrate" in navigator){
+				navigator.vibrate([1000, 1000, 1000, 1000, 1000]);
+				var r = confirm('shi fou quxiao');
+				if (r === true) {
+					navigator.vibrate(0);
 				}
 			} else {
-				alert('d');
+				alert('fail');
 			}
 			set.className = 'set';
 			down.className = 'down hidden';
